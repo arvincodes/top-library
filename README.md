@@ -15,7 +15,7 @@
 
 ## 🌟 Show Your Support
 
-Your star on GitHub can help others discover TOP Sign-up.  If you enjoy using it, consider leaving a star on this GitHub repo. 
+Your star on GitHub can help others discover Bookmark.  If you enjoy using it, consider leaving a star on this GitHub repo. 
 
 Your support means a lot! 🌟
 
