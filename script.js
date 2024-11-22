@@ -85,7 +85,7 @@ bookForm.addEventListener("submit", (event) => {
 })
 
 addBookToLibrary("James Clear", "Atomic Habits", 211, "Read")
-addBookToLibrary("J.K. Rowling", "Harry Potter and the Sorcerer's Stone", 309, "Read");
+addBookToLibrary("J.K. Rowling", "Harry Potter", 309, "Read");
 addBookToLibrary("George Orwell", "1984", 328, "Not Read");
 addBookToLibrary("Harper Lee", "To Kill a Mockingbird", 281, "Read");
 addBookToLibrary("F. Scott Fitzgerald", "The Great Gatsby", 180, "Read");
