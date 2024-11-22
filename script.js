@@ -31,11 +31,13 @@ function displayLibrary() {
 
     // specifies bookCard details
     bookCard.innerHTML = ` 
-      <h3></h3>
-      <p class="card-author">Author: ${book.author}</p>
-      <p class="card-title">Title: ${book.title}</p>
-      <p class="card-pages">Number of Pages: ${book.pages}</p>
-      <p class="card-status">Status: ${book.read}</p>
+      <h2>Book ${index + 1}</h2>
+        <div class="book-details">
+          <p class="card-author">Author: ${book.author}</p>
+          <p class="card-title">Title: ${book.title}</p>
+          <p class="card-pages">Number of Pages: ${book.pages}</p>
+          <p class="card-status">Status: ${book.read}</p>
+        </div>
       <button onclick="removeBook(${index})" class="card-remove-book">Remove</button>
       <button onclick="toggleReadStatus(${index})" class="card-toggle-read-status">Toggle Read Status</button>
     `
@@ -51,7 +53,7 @@ function removeBook(index) {
 
 function toggleReadStatus(index) {
   const book = myLibrary[index]
-  book.read = book.read === "read" ? "not read" : "read"
+  book.read = book.read === "Read" ? "Not Read" : "Read"
   displayLibrary()
 }
 
@@ -79,4 +81,12 @@ bookForm.addEventListener("submit", (event) => {
   bookForm.reset()
 })
 
+addBookToLibrary("James Clear", "Atomic Habits", 211, "Read")
+addBookToLibrary("James Clear", "Atomic Habits", 211, "Read")
+addBookToLibrary("James Clear", "Atomic Habits", 211, "Read")
+addBookToLibrary("James Clear", "Atomic Habits", 211, "Read")
+addBookToLibrary("James Clear", "Atomic Habits", 211, "Read")
+addBookToLibrary("James Clear", "Atomic Habits", 211, "Read")
+addBookToLibrary("James Clear", "Atomic Habits", 211, "Read")
+addBookToLibrary("James Clear", "Atomic Habits", 211, "Read")
 displayLibrary()
