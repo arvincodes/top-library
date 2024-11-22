@@ -1,6 +1,5 @@
-const myLibrary = []; // array where books are stored
+const myLibrary = [];
 
-// book constructor
 function Book(author, title, pages, read) {
   this.author = author;
   this.title = title;
@@ -8,13 +7,11 @@ function Book(author, title, pages, read) {
   this.read = read;
 }
 
-// function to add a new book to the library
 function addBookToLibrary(author, title, pages, read) {
   const newBook = new Book(author, title, pages, read);
   myLibrary.push(newBook);
 }
 
-// select elements
 const newBookButton = document.getElementById("newBookButton")
 const bookFormDialog = document.getElementById("bookFormDialog")
 const bookForm = document.getElementById("bookForm")
@@ -23,13 +20,12 @@ const closeFormButton = document.getElementById("closeFormButton")
 function displayLibrary() {
   const libraryContainer = document.querySelector(".library-container")
 
-  libraryContainer.innerHTML = "" // makes lib container empty
+  libraryContainer.innerHTML = ""
 
-  myLibrary.forEach((book, index) => { // for each book in the array, execute
+  myLibrary.forEach((book, index) => {
     const bookCard = document.createElement("div")
-    bookCard.classList.add("book-card") // adds a class of book-card
+    bookCard.classList.add("book-card")
 
-    // specifies bookCard details
     bookCard.innerHTML = ` 
       <h2>Book ${index + 1}</h2>
         <div class="book-details">
@@ -42,7 +38,7 @@ function displayLibrary() {
       <button onclick="toggleReadStatus(${index})" class="card-toggle-read-status">Toggle Read Status</button>
     `
     
-  libraryContainer.appendChild(bookCard) // appends book card as a child to the parent library container
+  libraryContainer.appendChild(bookCard)
   })
 }
 
@@ -59,10 +55,17 @@ function toggleReadStatus(index) {
 
 newBookButton.addEventListener("click", () => {
   bookFormDialog.showModal()
+  overlay.style.display = 'block';
 })
 
 closeFormButton.addEventListener("click", () => {
   bookFormDialog.close()
+  overlay.style.display = 'none';
+})
+
+addBookButton.addEventListener("click", () => {
+  bookFormDialog.close()
+  overlay.style.display = 'none';
 })
 
 bookForm.addEventListener("submit", (event) => {
@@ -87,7 +90,5 @@ addBookToLibrary("George Orwell", "1984", 328, "Not Read");
 addBookToLibrary("Harper Lee", "To Kill a Mockingbird", 281, "Read");
 addBookToLibrary("F. Scott Fitzgerald", "The Great Gatsby", 180, "Read");
 addBookToLibrary("J.R.R. Tolkien", "The Hobbit", 310, "Not Read");
-addBookToLibrary("Albert Camus", "The Stranger", 288, "Read");
-addBookToLibrary("Malcolm Gladwell", "Outliers", 320, "Not Read");
 
 displayLibrary()

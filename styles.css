@@ -7,9 +7,9 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #000000;
+  background-color: #2b2e32;
   border-radius: 10px;
-  border: 3px solid #ececec;
+  border: 3px solid #222529;
 }
 
 *, *::before, *::after {
@@ -23,7 +23,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: #ececec;
+  background-color: #222529;
   padding: 28px;
   font-family: "Inter", sans-serif;
   position: relative;
@@ -56,6 +56,10 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   width: 100%;
   margin-left: auto;
@@ -82,29 +86,36 @@ header div {
 
 header h1 {
   font-size: 28px;
+  color: #ffdd1f;
 }
 
 header p {
   font-size: 14px;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #2b2e32;
+  color: #ffdd1f;
   padding: 4px 10px;
   border-radius: 6px;
+  transition: 0.4s;
+}
+
+header p:hover {
+  opacity: 0.7;
 }
 
 #newBookButton {
   max-height: 40px;
   font-size: 14px;
+  background-color: #2b2e32;
+  color: #ffdd1f;
   border-radius: 4px;
-  border: 1px solid black;
+  border: 1px solid #2b2e32;
   padding: 2px 10px;
   cursor: pointer;
   transition: 0.4s;
 }
 
 #newBookButton:hover {
-  background-color: #000000;
-  color: #ffffff;
+  opacity: 0.7;
 }
 
 section {
@@ -114,6 +125,7 @@ section {
 
 section p {
   margin-bottom: 8px;
+  color: #ffffff;
 }
 
 .library-container {
@@ -125,9 +137,14 @@ section p {
 }
 
 .book-card {
-  background-color: #ffffff;
-  padding: 12px;
+  background-color: #2b2e32;
+  color: #ffffff;
+  padding: 20px;
   border-radius: 8px;
+}
+
+.book-card h2 {
+  margin-bottom: 12px;
 }
 
 .book-details {
@@ -135,16 +152,19 @@ section p {
 }
 
 .book-card button {
+  margin-right: 4px;
+  padding: 2px 8px;
   border-radius: 4px;
-  border: 1px solid black;
-  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
   cursor: pointer;
-  transition: 0.4s background-color;
+  transition: 0.4s;
 }
 
 .book-card button:hover {
-  background-color: #000000;
-  color: white;
+  border: 1px solid #ffdd1f;
+  color: #ffdd1f;
 }
 
 footer {
@@ -156,6 +176,22 @@ footer {
   width: 100%;
   padding: 16px 0;
   text-align: center;
+  color: #ffffff;
+}
+
+footer span {
+  color: #ffdd1f;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 dialog {
@@ -167,9 +203,9 @@ dialog {
   width: 100%;
   padding: 32px;
   border-radius: 8px;
-border: none;
-  background-color: white;
-  z-index: 1000;
+  border: none;
+  background-color: #2b2e32;
+  z-index: 1;
 }
 
 form {
@@ -178,6 +214,7 @@ form {
 
 form h2 {
   margin-bottom: 8px;
+  color:#ffffff;
 }
 
 form input {
@@ -187,24 +224,29 @@ form input {
   margin-bottom: 8px;
   padding: 4px 8px;
   font-size: 12px;
+  font-family: "Inter", sans-serif;
+}
+
+form label {
+  color: #ffffff;
 }
 
 form input:focus {
-  outline: #000000;
+  outline: #ffdd1f;
 }
 
 form select {
   margin-top: 8px;
   margin-bottom: 28px;
   margin-left: 12px;
-  border: 1px solid black;
+  border: 1px solid #222529;
   border-radius: 4px;
   padding: 4px 8px;
   font-size: 12px;
 }
 
 form select:focus {
-  outline: #000000;
+  outline: #ffdd1f;
 }
 
 form select option {
@@ -212,10 +254,11 @@ form select option {
 }
 
 form button {
-  background-color: #000000;
-  color: #ffffff;
+  padding: 2px 8px;
+  background-color: #222529;
+  color: #ffdd1f;
   border-radius: 6px;
-  border: 1px solid black;
+  border: 1px solid #222529;
   font-size: 13px;
   cursor: pointer;
   margin-right: 4px;
