@@ -11,7 +11,7 @@ function Book(author, title, pages, read) {
 // function to add a new book to the library
 function addBookToLibrary(author, title, pages, read) {
   const newBook = new Book(author, title, pages, read);
-  myLibrary.push(newBook); // Add the new book to the library
+  myLibrary.push(newBook);
 }
 
 // select elements
@@ -82,11 +82,12 @@ bookForm.addEventListener("submit", (event) => {
 })
 
 addBookToLibrary("James Clear", "Atomic Habits", 211, "Read")
-addBookToLibrary("James Clear", "Atomic Habits", 211, "Read")
-addBookToLibrary("James Clear", "Atomic Habits", 211, "Read")
-addBookToLibrary("James Clear", "Atomic Habits", 211, "Read")
-addBookToLibrary("James Clear", "Atomic Habits", 211, "Read")
-addBookToLibrary("James Clear", "Atomic Habits", 211, "Read")
-addBookToLibrary("James Clear", "Atomic Habits", 211, "Read")
-addBookToLibrary("James Clear", "Atomic Habits", 211, "Read")
+addBookToLibrary("J.K. Rowling", "Harry Potter and the Sorcerer's Stone", 309, "Read");
+addBookToLibrary("George Orwell", "1984", 328, "Not Read");
+addBookToLibrary("Harper Lee", "To Kill a Mockingbird", 281, "Read");
+addBookToLibrary("F. Scott Fitzgerald", "The Great Gatsby", 180, "Read");
+addBookToLibrary("J.R.R. Tolkien", "The Hobbit", 310, "Not Read");
+addBookToLibrary("Albert Camus", "The Stranger", 288, "Read");
+addBookToLibrary("Malcolm Gladwell", "Outliers", 320, "Not Read");
+
 displayLibrary()
